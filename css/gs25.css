@@ -1,0 +1,277 @@
+@charset "utf-8";
+/* @font-face {
+    font-family: 'KIMM_Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KIMM_Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+} */
+
+body {
+    font-family: Pretendard, Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+/* 내비게이션 영역 */
+
+#menu {
+    background-color: rgba(255, 255, 255, 255);
+    width: 100%;
+    z-index: 1;
+    background-image: url("../images/gs25/gs25.png");
+    background-repeat: no-repeat;
+    background-position: 380px 30px;
+}       
+
+#menu > ul {
+    /* border: 5px solid aqua; */
+    display: flex;
+    width: 840px;
+    text-align: center;
+    margin-left: 710px;
+    justify-content: space-between;
+}
+
+#menu > ul > li {
+    /* border: 5px solid red; */
+    font-size: 30px;
+    line-height: 120px;
+    float: right;
+}
+
+#menu > ul > li > a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+
+
+/* HOT 상품 */
+
+.content {
+    display: flex;
+    flex-direction: column;
+    /* border: 5px solid aqua; */
+    width: 1200px;
+    margin: 0 auto;
+    background-image: url('../images/gs25/left_arrow_2.png'), url('../images/gs25/right_arrow_2.png');
+    background-repeat: no-repeat;
+    background-position: 0px 60%, 100% 60%;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 70px;
+}
+
+#two > .content > h2 > span {
+    color: red;
+}
+
+.box-container {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.box-container > .box {
+    border: 1px solid #939393;
+    border-radius: 30px;
+    width: 308px;
+    height: 480px;
+    box-sizing: border-box;
+    text-align: center;     /* 가운데 정렬 */
+    padding-top: 30px;
+    margin-right: 50px;
+}
+
+.box-container > .box:last-child {
+    margin-right: 0;
+}
+
+p {
+    font-size: 20px;
+    font-family: Noto-sans, Arial, Helvetica, sans-serif;
+}
+
+#two > .content > .box-container > .box > p > span {
+    display: block;
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+.box-container-2 {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.box-container-2 > div:nth-child(1) {
+    width: 39px;
+    height: 13px;
+    background-color: #2abada;
+    border-radius: 30px;
+    margin-right: 10px;
+}
+
+.box-container-2 > div:nth-child(2) {
+    width: 39px;
+    height: 13px;
+    background-color: #c4c4c4;
+    border-radius: 30px;
+    margin-right: 0;
+}
+
+
+
+/* 1+1 상품 */
+
+#three > .content > h2 > span {
+    color: red;
+}
+
+#three > .content > .box-container > .box > p > span {
+    display: block;
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+
+
+/* 이벤트 */
+
+.event-content {
+    /* border: 5px solid aqua; */
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+#four > .event-content > .event-container > .box > img {
+    margin-bottom: 20px;
+}
+
+.event-container {
+    /* border: 5px solid yellow; */
+    display: flex;
+    margin: 0 auto;
+    margin-top: 50px;
+    justify-content: space-between;
+}
+
+.event-container > .box {
+    width: 570px;
+    /* border: 5px solid green; */
+}
+
+#four > .event-content > .event-container > .box > span {
+    font-size: 16px;
+}
+
+
+#four > .event-content > .event-container > .box > p {
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+
+
+/* HOT 소식 */
+
+#six {
+    background-color: #ececec;
+    padding-bottom: 20px;
+}
+
+#six > .news-content > h2 {
+    padding-top: 100px;
+    margin-bottom: 30px;
+}
+
+#six > .news-content > h2 > span {
+    color: red;
+}
+
+.news-content {
+    /* border: 5px solid aqua; */
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.news-box {
+    /* border: 5px solid green; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.news-box > div > p {
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+
+
+/* 푸터 영역 */
+
+#seven {
+    /* border: 5px solid aqua; */
+    margin-bottom: 80px;
+}
+
+.footer-content {
+    /* border: 5px solid yellow; */
+    width: 1200px;
+    margin: 0 auto;
+    background-image: url('../images/gs25/gs25_mini.png');
+    background-repeat: no-repeat;
+    background-position: 0px 10%;
+}
+
+#seven > .footer-content > ul {
+    /* border: 5px solid green; */
+    display: flex;
+    padding-top: 70px;
+    margin-top: 70px;
+    margin-bottom: 30px;
+}
+
+#seven > .footer-content > ul > li {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+#seven > .footer-content > ul > li:first-child {
+    color: #1a15ee;
+    font-weight: bold;
+}
+
+#seven > .footer-content > ul > li:after {
+    content: "|";
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: lighter;
+    color: #797979;
+}
+
+#seven > .footer-content > ul > li:last-child:after {
+    display: none;
+}
+
+#seven > .footer-content > span {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+#seven > .footer-content > div > p {
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+#seven > .footer-content > div {
+    margin-top: 20px;
+}
