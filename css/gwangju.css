@@ -1,0 +1,574 @@
+@charset "utf-8";
+
+body {
+    font-family: Pretendard, Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+/* 내비게이션 영역 */
+
+.content {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#top > .content > ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#top > .content > ul > li > a {
+    display: block;
+    text-decoration: none;
+    color: #797979;
+}
+
+#top > .content > ul > li {
+    /* border: 5px solid yellow; */
+    font-size: 16px;
+    line-height: 130px;
+    display: inline-flex;
+    /* align-items: center; */
+}
+
+#top {
+    background-color: rgba(255, 255, 255, 255);
+    width: 100%;
+    z-index: 1;
+    background-image: url("../images/gwangju/logo1.png");
+    background-repeat: no-repeat;
+    background-position: 350px 25px;
+}
+
+#top > .content > ul > li:after {
+    /* border: 5px solid yellow; */
+    content: "|";
+    padding-left: 30px;
+    padding-right: 30px;
+    font-weight: lighter;
+    color: #797979;
+}
+
+#top > .content > ul > li:last-child:after {
+    display: none;
+}
+
+#menu > ul {
+    /* border: 5px solid aqua; */
+    display: flex;
+    justify-content: center;
+}
+
+#menu > ul > li {
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 80px;
+    margin-right: 100px;
+}
+
+#menu > ul > li:last-child {
+    margin-right: 0; /* 마지막 항목의 오른쪽 마진 제거 */
+}
+
+#menu > ul > li > a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+
+
+/* 메뉴 영역 */
+
+#one {
+    /* border: 5px solid red; */
+    position: relative;
+}
+
+#one > div {
+    background-color: white;
+    width: 1100px;
+    border-radius: 60px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 750px;
+    left: 410px;
+    box-shadow: 5px 5px 10px 1px #c9c9c9
+}
+
+#one > div > ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px; /* 이미지와 텍스트 간격 */
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#one > div > ul > li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#one > div > ul > li > img {
+    margin-bottom: 10px; /* 이미지 아래 여백 */
+}
+
+#one > div >  ul > li > span {
+    font-weight: bold;
+}
+
+
+
+/* GU NOTICE */
+
+#two {
+    margin-top: 150px;
+    padding: 30px;
+}
+
+#two h2 {
+    font-size: 70px;
+    font-weight: bold;
+    color: #b6d23b;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+#two h2 span {
+    color: #76bdea;
+}
+
+
+#two .content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px; /* 공지사항과 학사일정 사이 간격 */
+}
+
+/* 공지사항 탭 */
+.notice-tabs {
+    flex: 3; /* 공지사항이 더 넓게 보이도록 설정 */
+}
+
+.tab-titles {
+    display: flex;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.tab-titles li {
+    flex: 1;
+    text-align: center;
+    font-size: 20px;
+    padding: 20px 0;
+    cursor: pointer;
+    color: #333;
+    border-right: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+.tab-titles li:last-child {
+    border-right: none;
+}
+
+.tab-titles li.active {
+    background-color: #000635;
+    color: white;
+}
+
+.tab-content .tab {
+    display: none;
+    padding: 10px 0;
+}
+
+.tab-content .tab.active {
+    display: block;
+}
+
+.notice-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.notice-list li {
+    font-size: 16px;
+    line-height: 30px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+    padding: 5px 0;
+}
+
+.notice-list .date {
+    color: #888;
+    font-size: 12px;
+    line-height: 30px;
+}
+
+/* 학사일정 */
+
+.schedule {
+    flex: 1;
+}
+
+.schedule h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #ddd;
+}
+
+.schedule p {
+    margin-bottom: 20px;
+    color: #393939;
+    text-align: center;
+}
+
+.schedule ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.schedule ul li {
+    display: flex; /* 아이콘과 텍스트를 가로로 정렬 */
+    align-items: flex-start; /* 아이콘과 텍스트의 시작점 맞춤 */
+    margin-bottom: 12px; /* 항목 간격 */
+}
+
+.schedule ul li .icon {
+    flex-shrink: 0; /* 아이콘 크기 고정 */
+    margin-right: 10px; /* 아이콘과 텍스트 간격 */
+    font-size: 18px; /* 아이콘 크기 */
+    margin-top: 4px; /* 아이콘과 텍스트 세로 정렬 */
+}
+
+.schedule ul li .text {
+    display: flex;
+    flex-direction: column; /* 제목과 날짜를 세로로 정렬 */
+}
+
+.schedule ul li .text .title {
+    font-size: 16px; /* 제목 폰트 크기 */
+    color: #333; /* 제목 색상 */
+    line-height: 1.8; /* 줄 간격 */
+}
+
+.schedule ul li .text .date {
+    font-size: 13px; /* 날짜 폰트 크기 */
+    color: #888; /* 날짜 색상 */
+    line-height: 1.2; /* 줄 간격 */
+}
+
+
+
+/* GU FOCUS */
+
+#three {
+    text-align: center;
+    margin-top: 80px;
+}
+
+#three h2 {
+    font-size: 70px;
+    font-weight: bold;
+    color: #b6d23b;
+    margin-bottom: 30px;
+}
+
+#three h2 span {
+    color: #76bdea;
+}
+
+.slider {
+    position: relative;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 100px; /* 슬라이드 간 간격 */
+    justify-content: center;
+}
+
+.slide {
+    flex: 0 0 33.33%; /* 각 슬라이드가 1/3 크기를 차지 */
+    text-align: center;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.slide p {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #333;
+}
+
+/* 버튼 스타일 */
+.slider button {
+    position: absolute;
+    top: 50%; /* 슬라이더 중간에 배치 */
+    transform: translateY(-50%); /* 세로 중심 정렬 */
+    background-color: white; /* 배경색 */
+    border: none;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    z-index: 10; /* 이미지 위에 배치 */
+    border-radius: 50%; /* 동그랗게 */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* 그림자 */
+}
+
+.slider button.prev {
+    left: 460px; /* 슬라이더 안으로 가까이 위치 */
+    background: url('/images/gwangju/button_left.png') no-repeat center center;
+}
+
+.slider button.next {
+    right: 460px; /* 슬라이더 안으로 가까이 위치 */
+    background: url('/images/gwangju/button_right.png') no-repeat center center;
+}
+
+.slider button:hover {
+    background-color: #f0f0f0; /* 호버 시 배경 색상 변경 */
+}
+
+
+
+/* GU SNS */
+#four {
+    margin-top: 100px;
+}
+
+#four h2 {
+    font-size: 70px;
+    font-weight: bold;
+    color: #b6d23b;
+    margin-bottom: 40px;
+}
+
+#four h2 span {
+    color: #76bdea;
+}
+
+.sns-content {
+    padding: 40px 0 60px 0;
+    flex-wrap: wrap;
+    background-color: #e8e8e8;
+}
+
+.sns-content h3 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #003e03;
+    width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.main {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.video {
+    background-color: white;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+    background-image: url('../images/gwangju/icon12.png');
+    background-repeat: no-repeat;
+    background-position: 3% 84.5%;
+
+}
+
+.video-2 {
+    background-color: white;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+    background-image: url('../images/gwangju/icon13.png');
+    background-repeat: no-repeat;
+    background-position: 6% 84.5%;
+}
+
+.main .video img {
+    display: block;
+    border-bottom: 10px solid #003e03;
+    margin-bottom: 30px;
+}
+
+.main .video-2 img {
+    display: block;
+    border-bottom: 10px solid #003e03;
+    margin-bottom: 30px;
+}
+
+.main .video span {
+    font-size: 16px;
+    padding-left: 70px;
+    
+}
+
+.main .video-2 span {
+    font-size: 16px;
+    padding-left: 70px;
+}
+
+.main .video p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    padding-left: 70px;
+}
+
+.main .video-2 p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    padding-left: 70px;
+}
+
+.sns-cards {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.card {
+    text-align: center;
+}
+
+.card img {
+    margin-bottom: 20px;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card p {
+    font-size: 16px;
+    color: #333;
+}
+
+.more {
+    width: 423.19px;
+    height: 150px;
+    line-height: 150px;
+    background-color: white;
+    border-top: 10px solid #003e03;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+    background-image: url('../images/gwangju/icon11.png');
+    background-repeat: no-repeat;
+    background-position: 80% 50%;
+}
+
+.more a {
+    display: block;
+    text-align: left;
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    padding-left: 70px;
+
+}
+
+.more span {
+    color: #003e03;
+}
+
+
+
+/* footer */
+#five {
+    background-color: #2c343e; /* 사진의 어두운 배경색 */
+    color: #ffffff; /* 텍스트는 흰색 */
+    padding: 20px 0;
+}
+
+#five .footer-content {
+    width: 1200px; /* 중앙 정렬을 위한 고정 너비 */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.footerTitle {
+    position: relative;
+    width: 280px;
+    height: 60px;
+    background-color: #525c69;
+    line-height: 60px;
+    text-align: left;
+}
+
+#five ul {
+    list-style: none; /* 리스트 스타일 제거 */
+    padding: 0;
+    margin: 15px 0; /* 위아래 간격 */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* 화면 크기에 따라 줄바꿈 */
+    gap: 20px;
+}
+
+#five ul li {
+    color: #ffffff; /* 리스트 항목 텍스트 색상 */
+    cursor: pointer; /* 클릭 가능한 항목 표시 */
+    font-size: 16px;
+}
+
+#five ul li:hover {
+    color: #ffd700;
+}
+
+#five .footerTitle input[type="button"] {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    padding-left: 20px;
+}
+
+.footerTitle::after {
+    content: '∧';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.footerTitle:hover::after {
+    color: #ffd700; 
+}
+
+#five div {
+    margin-top: 20px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #d3d3d3;
+}
+
+#five div p {
+    margin: 5px 0;
+}
+
