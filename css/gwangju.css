@@ -24,11 +24,9 @@ body {
 }
 
 #top > .content > ul > li {
-    /* border: 5px solid yellow; */
     font-size: 16px;
     line-height: 130px;
     display: inline-flex;
-    /* align-items: center; */
 }
 
 #top {
@@ -41,7 +39,6 @@ body {
 }
 
 #top > .content > ul > li:after {
-    /* border: 5px solid yellow; */
     content: "|";
     padding-left: 30px;
     padding-right: 30px;
@@ -53,35 +50,96 @@ body {
     display: none;
 }
 
-#menu > ul {
-    /* border: 5px solid aqua; */
-    display: flex;
-    justify-content: center;
-}
-
-#menu > ul > li {
-    font-size: 25px;
-    font-weight: bold;
-    line-height: 80px;
-    margin-right: 100px;
-}
-
-#menu > ul > li:last-child {
-    margin-right: 0; /* 마지막 항목의 오른쪽 마진 제거 */
-}
-
-#menu > ul > li > a {
-    display: block;
-    text-decoration: none;
-    color: black;
-}
-
-
+/* ------------------------------------- */
 
 /* 메뉴 영역 */
 
+.menu-container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.main-menu {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.main-menu li {
+    cursor: pointer;
+}
+
+.submenu-wrapper {
+    background: white;
+    border-top: 1px solid #ccc;
+    display: none;
+}
+
+.submenu-wrapper.active {
+    display: block;
+}
+
+.submenu {
+    display: none;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 30px 0;
+    display: flex;
+    gap: 60px;
+}
+
+.submenu.active {
+    display: flex;
+}
+
+.submenu-box {
+    flex: none;
+    min-width: 180px;
+}
+
+.submenu-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.submenu-title:hover {
+    cursor: pointer;
+    color: green;
+}
+
+.submenu-line {
+    width: 100%;
+    height: 1px;
+    background-color: #aaa;
+    margin-bottom: 10px;
+}
+
+.submenu-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.submenu-box ul li {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.submenu-box ul li:hover {
+    cursor: pointer;
+    color: green;
+}
+
+/* ------------------------------------- */
+
 #one {
-    /* border: 5px solid red; */
     position: relative;
 }
 
@@ -115,10 +173,12 @@ body {
 
 #one > div > ul > li > img {
     margin-bottom: 10px; /* 이미지 아래 여백 */
+    cursor: pointer;
 }
 
 #one > div >  ul > li > span {
     font-weight: bold;
+    cursor: pointer;
 }
 
 
@@ -151,6 +211,7 @@ body {
 }
 
 /* 공지사항 탭 */
+
 .notice-tabs {
     flex: 3; /* 공지사항이 더 넓게 보이도록 설정 */
 }
@@ -239,36 +300,36 @@ body {
 }
 
 .schedule ul li {
-    display: flex; /* 아이콘과 텍스트를 가로로 정렬 */
+    display: flex;
     align-items: flex-start; /* 아이콘과 텍스트의 시작점 맞춤 */
-    margin-bottom: 12px; /* 항목 간격 */
+    margin-bottom: 12px;
 }
 
 .schedule ul li .icon {
     flex-shrink: 0; /* 아이콘 크기 고정 */
-    margin-right: 10px; /* 아이콘과 텍스트 간격 */
-    font-size: 18px; /* 아이콘 크기 */
+    margin-right: 10px;
+    font-size: 18px;
     margin-top: 4px; /* 아이콘과 텍스트 세로 정렬 */
 }
 
 .schedule ul li .text {
     display: flex;
-    flex-direction: column; /* 제목과 날짜를 세로로 정렬 */
+    flex-direction: column;
 }
 
 .schedule ul li .text .title {
-    font-size: 16px; /* 제목 폰트 크기 */
-    color: #333; /* 제목 색상 */
-    line-height: 1.8; /* 줄 간격 */
+    font-size: 16px;
+    color: #333;
+    line-height: 1.8;
 }
 
 .schedule ul li .text .date {
-    font-size: 13px; /* 날짜 폰트 크기 */
-    color: #888; /* 날짜 색상 */
-    line-height: 1.2; /* 줄 간격 */
+    font-size: 13px;
+    color: #888;
+    line-height: 1.2;
 }
 
-
+/* ------------------------------------- */
 
 /* GU FOCUS */
 
@@ -321,33 +382,28 @@ body {
 /* 버튼 스타일 */
 .slider button {
     position: absolute;
-    top: 50%; /* 슬라이더 중간에 배치 */
-    transform: translateY(-50%); /* 세로 중심 정렬 */
-    background-color: white; /* 배경색 */
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
     border: none;
-    width: 60px;
-    height: 60px;
+    padding: 0;
     cursor: pointer;
-    z-index: 10; /* 이미지 위에 배치 */
-    border-radius: 50%; /* 동그랗게 */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* 그림자 */
+    z-index: 10;
 }
 
+.slider button img {
+    width: 80px;
+    height: 80px;
+    display: block;
+}
 .slider button.prev {
-    left: 460px; /* 슬라이더 안으로 가까이 위치 */
-    background: url('/images/gwangju/button_left.png') no-repeat center center;
+    left: 450px;
 }
-
 .slider button.next {
-    right: 460px; /* 슬라이더 안으로 가까이 위치 */
-    background: url('/images/gwangju/button_right.png') no-repeat center center;
+    right: 450px;
 }
 
-.slider button:hover {
-    background-color: #f0f0f0; /* 호버 시 배경 색상 변경 */
-}
-
-
+/* ------------------------------------- */
 
 /* GU SNS */
 #four {
@@ -493,17 +549,17 @@ body {
     color: #003e03;
 }
 
-
+/* ------------------------------------- */
 
 /* footer */
 #five {
-    background-color: #2c343e; /* 사진의 어두운 배경색 */
-    color: #ffffff; /* 텍스트는 흰색 */
+    background-color: #2c343e;
+    color: #ffffff;
     padding: 20px 0;
 }
 
 #five .footer-content {
-    width: 1200px; /* 중앙 정렬을 위한 고정 너비 */
+    width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -519,9 +575,9 @@ body {
 }
 
 #five ul {
-    list-style: none; /* 리스트 스타일 제거 */
+    list-style: none;
     padding: 0;
-    margin: 15px 0; /* 위아래 간격 */
+    margin: 15px 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap; /* 화면 크기에 따라 줄바꿈 */
@@ -529,8 +585,8 @@ body {
 }
 
 #five ul li {
-    color: #ffffff; /* 리스트 항목 텍스트 색상 */
-    cursor: pointer; /* 클릭 가능한 항목 표시 */
+    color: #ffffff;
+    cursor: pointer;
     font-size: 16px;
 }
 
